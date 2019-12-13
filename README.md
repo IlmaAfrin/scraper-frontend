@@ -14,3 +14,12 @@ Notable feature:
 Improvement: A simple user interface can be implemented to take the keyword as input.
 
 
+To Run:
+Clone this repository to your local drive. 
+You need to run the command 'npm i' to get the repository ready to run.
+Then run command 'ng serve'.
+
+Note that thre are some requirements to run Angular Application.
+Please follow the link https://www.tutorialspoint.com/angular6/angular6_project_setup.htm
+
+Make sure application from https://github.com/IlmaAfrin/scraper is running to get data.
