@@ -1,0 +1,16 @@
+<div style="margin: 20px; background: aliceblue">
+  <mat-tab-group (selectedTabChange)="tabChanged($event)">
+    <mat-tab label="Newest">
+      <p style="margin: 10px">Newest Questions:</p>
+        <div *ngFor="let data of (OuestionDataList$ | async)" style="margin-bottom: 15px; margin-left: 10px; color: blue">
+          <div style="cursor: pointer" (click)="onClick(data)" [innerHTML]="data.question"></div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Most Voted">
+      <p style="margin: 10px">Most Voted Questions:</p>
+        <div *ngFor="let data of (OuestionDataList$ | async)" style="margin-bottom: 15px; margin-left: 10px; color: blue">
+          <div style="cursor: pointer" (click)="onClick(data)" [innerHTML]="data.question"></div>
+        </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

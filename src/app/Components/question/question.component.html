@@ -1,0 +1,22 @@
+<div *ngIf="(OuestionThread$ | async)">
+  <h3>Question: {{(questionData$ | async).question}}</h3>
+
+  <div style="background: white;">
+    <div style="background: #7f6298; margin: 10px;">
+      <div style="background: #dbd6de; margin-left: 10px;">
+        <div [innerHTML]="(OuestionThread$ | async).questionDetail.question" style="margin: 10px;"></div>
+      </div>
+    </div>
+  </div>
+  <h3>Answers: </h3>
+  <h4>{{(OuestionThread$ | async).questionAnswers.length}} answers scraped.</h4>
+ <div style="background: white;">
+   <div *ngFor="let data of (OuestionThread$ | async).questionAnswers">
+     <div style="background: #6e9598; margin: 10px;">
+       <div style="background: skyblue; margin-left: 10px;">
+         <div [innerHTML]="data.answer" style="margin-left: 20px;"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
